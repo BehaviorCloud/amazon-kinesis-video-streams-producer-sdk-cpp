@@ -127,7 +127,7 @@ if [ ! -f /usr/lib/liblog4cplus.dylib ]; then
     cd $DOWNLOADS
     tar -xvf log4cplus-1.2.0.tar.xz
     cd $DOWNLOADS/log4cplus-1.2.0
-    ./configure --prefix=$DOWNLOADS/local/
+    ./configure
     make -j $max_parallel
     make install
   fi
