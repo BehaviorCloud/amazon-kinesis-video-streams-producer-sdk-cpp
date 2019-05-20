@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Installs the open source dependencies
 # for Kinesis Video Sdk demo application
@@ -91,14 +91,14 @@ KERNEL_VERSION=`uname -r|cut -f1 -d"."`
 echo "Checking openssl at $DOWNLOADS/local/lib/libssl.a"
 if [ ! -f $DOWNLOADS/local/lib/libssl.a ]; then
   echo "openssl lib not found. Installing"
-  if [ ! -f $DOWNLOADS/openssl-1.1.0f.tar.gz ]; then
+  if [ ! -f $DOWNLOADS/openssl-1.1.0j.tar.gz ]; then
     cd $DOWNLOADS
-    #download_cmd="curl -L "https://www.openssl.org/source/openssl-1.1.0f.tar.gz" -o "openssl-1.1.0f.tar.gz" "
-    $SYS_CURL -L "https://www.openssl.org/source/openssl-1.1.0f.tar.gz" -o "openssl-1.1.0f.tar.gz"
+    #download_cmd="curl -L "https://www.openssl.org/source/openssl-1.1.0j.tar.gz" -o "openssl-1.1.0j.tar.gz" "
+    $SYS_CURL -L "https://www.openssl.org/source/openssl-1.1.0j.tar.gz" -o "openssl-1.1.0j.tar.gz"
   fi
   cd $DOWNLOADS
-  tar -xvf openssl-1.1.0f.tar.gz
-  cd $DOWNLOADS/openssl-1.1.0f
+  tar -xvf openssl-1.1.0j.tar.gz
+  cd $DOWNLOADS/openssl-1.1.0j
   ./config  --prefix=$DOWNLOADS/local/ --openssldir=$DOWNLOADS/local/
   make -j $max_parallel
   make install
