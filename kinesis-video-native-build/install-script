@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Installs the open source dependencies
 # for Kinesis Video Sdk demo application
