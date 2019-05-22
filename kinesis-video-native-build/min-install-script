@@ -152,7 +152,6 @@ else
 fi
 
 make -j ${max_parallel}
-cp *.so /usr/lib/gstreamer-1.0
 
 echo "**********************************************************"
 echo Success!!!
